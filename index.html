@@ -49,14 +49,25 @@
       .attr('y1','100')
       .attr('y2','200')
       .style('stroke','cyan');
+    }
 
-
-
-
+  function styleCircle(){
+    var circles = d3.selectAll('circle')
+      .attr('r','30');
+    d3.select('#start')
+      .style('fill','lavender');
+    d3.select('#end')
+      .style('fill','none')
+      .style('stroke','red');
   }
+
+
+
+
   createSVG();
   moveSVG();
   createLine();
+  styleCircle();
   </script>
   </body>
 </html>
