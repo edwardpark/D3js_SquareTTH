@@ -20,10 +20,7 @@
           mySVG.append('circle')
                 .attr('id', 'start')
                 .attr('class', 'foobar')
-                .attr('r','30')
-                .attr('cx','50')
-                .attr('cy','50');
-
+                .attr('r','30');
 
           mySVG.append('circle')
                 .attr('id', 'end')
@@ -33,6 +30,17 @@
           mySVG.append('line')
                 .attr('class', 'foobar');
       };
+
+  function moveSVG(){
+      d3.select('#start')
+        .attr('cx','50')
+        .attr('cy','50');
+
+      d3.select('#end')
+        .attr('cx','100')
+        .attr('cy','100');
+
+  };
 
 
 
