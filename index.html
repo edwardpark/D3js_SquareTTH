@@ -28,8 +28,10 @@
                         .enter()
                        .append('circle');
 
-            dots.attr('r', function(d) {return d.TMAX});
 
+            //selects all circles and then binds the max temp data to each individual data element => DOM element.
+            dots.attr('r', function(d) {return Math.abs(d.TMAX) / 100});
+            //.abs and division because data set is returned from celcsius
 
       });
   </script>
