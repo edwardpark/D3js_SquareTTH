@@ -27,6 +27,10 @@
                         .data(data)
                         .enter()
                        .append('circle');
+
+            dots.attr('r', function(d) {return d.TMAX});
+
+
       });
   </script>
   <script>
