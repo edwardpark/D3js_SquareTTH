@@ -16,9 +16,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js" charset="utf-8"></script>
     <!-- <div class = ".chart"></div> -->
     <script type="text/javascript">
+
+    var height = 800;
+    var width = 500;
+    var padding = 50;
+
+
     var viz = d3.select("#viz-wrapper")
                       .append('svg')
-                      .attr('id', 'viz');
+                      .attr('id', 'viz')
+                      .attr('height',height)
+                      .attr('width',width);
 
 
        d3.csv('climate_data.csv', function(data) {
@@ -32,7 +40,7 @@
             //selects all circles and then binds the max temp data to each individual data element => DOM element.
             dots.attr('r', function(d) {return Math.abs(d.TMAX) / 100});
             //.abs and division because data set is returned from celcsius and need to acommodate
-            //because some points actually are plotting larger than svg itself I found. 
+            //because some points actually are plotting larger than svg itself I found.
 
       });
   </script>
