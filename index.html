@@ -24,14 +24,15 @@
        d3.csv('climate_data.csv', function(data) {
 
            dots = viz.selectAll('circle')
-                        .data(data)
-                        .enter()
-                       .append('circle');
+                        .data(data) //evals data ,returning update selection
+                        .enter() // retuns subset of data without DOM elements
+                       .append('circle'); // for each data point without DOM element append.
 
 
             //selects all circles and then binds the max temp data to each individual data element => DOM element.
             dots.attr('r', function(d) {return Math.abs(d.TMAX) / 100});
-            //.abs and division because data set is returned from celcsius
+            //.abs and division because data set is returned from celcsius and need to acommodate
+            //because some points actually are plotting larger than svg itself I found. 
 
       });
   </script>
