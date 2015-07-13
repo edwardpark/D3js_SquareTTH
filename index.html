@@ -33,28 +33,30 @@
 
   function moveSVG(){
       d3.select('#start')
-        .attr('cx','50')
-        .attr('cy','50');
-
-      d3.select('#end')
         .attr('cx','100')
         .attr('cy','100');
+
+      d3.select('#end')
+        .attr('cx','200')
+        .attr('cy','200');
 
   };
 
   function createLine(){
     d3.select('line')
-      .attr('x1','0')
-      .attr('x2','150')
-      .attr('y1','0')
-      .attr('y2','150')
+      .attr('x1','100')
+      .attr('x2','200')
+      .attr('y1','100')
+      .attr('y2','200')
       .style('stroke','cyan');
 
 
 
 
   }
-
+  createSVG();
+  moveSVG();
+  createLine();
   </script>
   </body>
 </html>
